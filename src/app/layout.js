@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "../components/Header";
+import { dark, neobrutalism } from "@clerk/themes";
+
 
 
 
@@ -16,7 +18,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ClerkProvider>
+        <ClerkProvider appearance={{
+         baseTheme: [neobrutalism, dark]
+        }}>
           <Header/>
           {children}
         </ClerkProvider>

@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <h1 className="font-bold text-center mt-10">HomePage</h1>
-      <Link href='/about'><h1 className="font-bold text-center mt-10">About</h1></Link>
+      
     </div>
   );
 }
