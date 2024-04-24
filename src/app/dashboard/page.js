@@ -4,7 +4,6 @@ import {auth, currentUser} from "@clerk/nextjs";
 const Dashboard = async () =>  {
     const {userId} = auth();
     const user = await currentUser();
-    console.log(user);
 
     if(!userId || !user) {
         return <div>You are not logged in</div>
